@@ -6,8 +6,14 @@ Test-time task adaptation in few-shot learning aims to adapt a pre-trained task-
   <img src="./figures/f1.png" style="width:50%">
 </p>
  
+## Framework
+- An overview of the proposed DETA (in a 2-way 3-shot exemple). During each iteration of task adaptation, the images together with a collection of cropped local regions of the support samples are first fed into a pre-trained model to extract image and region representations. Next, a Contrastive Relevance Aggregation(CoRA) module takes the region representations as input to determine the weight of each region, based on which we can calculate the image weights by a momentum accumulator. Finally, a Supervised Soft-Clustering (SS-CL) loss and a Hybrid Soft-ProtoNet (HS-PN) loss are devised in a weighted embedding space for bias-robust representation learning. At inference, we only retain the adapted model to produce image representations of support samples, on which we build a classifier guided by the refined image weights from the accumulator. 
+<p align="center">
+  <img src="./figures/f2.png" style="width:95%">
+</p>
 
-## Features at a glance
+
+## Contributions
 - We uncover the overlooked support bias problem in test-time task adaptation, and propose DETA to resolve the two types of support bias (i.e., data and label bias) in a unified framework.
 
 - DETA can be flexibly plugged into different adapter-based and finetuning-based task adaptation paradigms.
@@ -25,7 +31,7 @@ Test-time task adaptation in few-shot learning aims to adapt a pre-trained task-
   <img src="./figures/t2.png" style="width:50%">
 </p>
 
-- State-of-the-art-comparison
+- State-of-the-art Comparison
 <p align="center">
   <img src="./figures/t3.png" style="width:95%">
 </p>

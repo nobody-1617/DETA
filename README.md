@@ -80,6 +80,8 @@ Specify a pretrained model to be adapted, and execute the following command.
     ```
     python main.py --ours True --pretrained_model=MoCo --maxIt=40 --n_regions=2 --ratio=0. 
     ```
+ Note: ratio=0. -- data-debiasing,  0. < ratio < 1.0 -- label-debiasing.
+
 
 ## References
 <div style="text-align:justify; font-size:80%">

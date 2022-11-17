@@ -61,7 +61,7 @@ This code requires the following:
 
 - [CLIP (RN-50)](https://github.com/OpenAI/CLIP)
 
-- [Deit (ViT-S)]({https://github.com/facebookresearch/deit)
+- [Deit (ViT-S)](https://github.com/facebookresearch/deit)
 
 - [Swin Transformer (Tiny)](https://github.com/microsoft/Swin-Transformer)
 

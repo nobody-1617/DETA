@@ -62,7 +62,7 @@ def main():
     trainsets = TRAIN_METADATASET_NAMES
     test_loader = MetaDatasetEpisodeReader('test', trainsets, trainsets, testsets, test_type=args['test.type'])
 
-    model_name = args['model.name']
+    model_name = args['pretrained_model']
     ratio = args['ratio']
     Ours = args['ours']
 

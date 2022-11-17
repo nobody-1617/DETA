@@ -17,7 +17,7 @@ Test-time task adaptation in few-shot learning aims to adapt a pre-trained task-
 ## Results on [Meta-dataset](https://github.com/google-research/meta-dataset)
 - Data-debiasing on vanilla Meta-dataset
 <p align="center">
-  <img src="./figures/t1.png" style="width:60%">
+  <img src="./figures/t1.png" style="width:100%">
 </p>
 
 - Label-debiasing on label-corrupted Meta-dataset
@@ -27,7 +27,7 @@ Test-time task adaptation in few-shot learning aims to adapt a pre-trained task-
 
 - State-of-the-art-comparison
 <p align="center">
-  <img src="./figures/t3.png" style="width:60%">
+  <img src="./figures/t3.png" style="width:100%">
 </p>
 
 

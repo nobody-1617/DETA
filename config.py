@@ -14,7 +14,7 @@ parser.add_argument('--data.num_workers', type=int, default=32, metavar='NEPOCHS
 
 # model args
 default_model_name = 'noname'
-parser.add_argument('--model.name', type=str, default=default_model_name, metavar='MODELNAME',
+parser.add_argument('--model.name', type=str, default="moco", metavar='MODELNAME',
                     help="A name you give to the extractor".format(default_model_name))
 parser.add_argument('--model.backbone', default='resnet18', help="Use ResNet18 for experiments (default: False)")
 parser.add_argument('--model.classifier', type=str, default='linear', choices=['none', 'linear', 'cosine'], help="Do classification using cosine similatity between activations and weights")
@@ -103,6 +103,16 @@ parser.add_argument('--out.dir', default='', type=str, metavar='PATH',
                     help='directory to output the result and checkpoints')
 parser.add_argument('--source', default='', type=str, metavar='PATH',
                     help='path of pretrained model')
+
+
+parser.add_argument('--maxIt', type=int, default=40, metavar='MaxIteration',
+                    help='the value of Max Iteration')
+parser.add_argument('--n_regions', type=int, default=2, metavar='N_Regions',
+                    help='number of regions cropped from every image')
+parser.add_argument('--ratio', type=float, default=0., metavar='Ratio',
+                    help='ratio of support samples with data bias')
+parser.add_argument('--ours', action='store_true', help="ours or baseline")
+
 
 
 # log args

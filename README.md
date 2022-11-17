@@ -37,12 +37,7 @@ An overview of the proposed DETA (in a 2-way 3-shot exemple). During each iterat
 </p>
 
 
-## Model Zoo
-- [Single-domain networks (one for each dataset)](https://drive.google.com/file/d/1MvUcvQ8OQtoOk1MIiJmK6_G8p4h8cbY9/view?usp=sharing)
-
-- [A single universal network (URL) learned from 8 training datasets](https://drive.google.com/file/d/1Dv8TX6iQ-BE2NMpfd0sQmH2q4mShmo1A/view?usp=sharing)
-
-- ImageNet model learned with ResNet34 and higher resolution images (224x224) like CTX [10], coming soon!
+# Implementation Guidance. 
 
 ## Dependencies
 This code requires the following:
@@ -50,12 +45,21 @@ This code requires the following:
 * PyTorch 1.0 or greater
 * TensorFlow 1.14 or greater
 
-## Installation
+## Datasets
 * Clone or download this repository.
 * Configure Meta-Dataset:
     * Follow the "User instructions" in the [Meta-Dataset repository](https://github.com/google-research/meta-dataset) for "Installation" and "Downloading and converting datasets".
     * Edit ```./meta-dataset/data/reader.py``` in the meta-dataset repository to change ```dataset = dataset.batch(batch_size, drop_remainder=False)``` to ```dataset = dataset.batch(batch_size, drop_remainder=True)```. (The code can run with ```drop_remainder=False```, but in our work, we drop the remainder such that we will not use very small batch for some domains and we recommend to drop the remainder for reproducing our methods.)
     * To test unseen domain (out-of-domain) performance on additional datasets, i.e. MNIST, CIFAR-10 and CIFAR-100, follow the installation instruction in the [CNAPs repository](https://github.com/cambridge-mlg/cnaps) to get these datasets.
+
+## Pretrained Models
+- [MoCo-v2 (RN-50)](https://drive.google.com/file/d/1MvUcvQ8OQtoOk1MIiJmK6_G8p4h8cbY9/view?usp=sharing)
+
+- [CLIP (RN-50)](https://drive.google.com/file/d/1Dv8TX6iQ-BE2NMpfd0sQmH2q4mShmo1A/view?usp=sharing)
+
+- [Deit (ViT-S)](https://drive.google.com/file/d/1MvUcvQ8OQtoOk1MIiJmK6_G8p4h8cbY9/view?usp=sharing)
+
+- [Swin Transformer (Tiny)](https://drive.google.com/file/d/1Dv8TX6iQ-BE2NMpfd0sQmH2q4mShmo1A/view?usp=sharing)
 
 ## Initialization
 1. Before doing anything, first run the following commands.

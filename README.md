@@ -78,7 +78,7 @@ Specify a pretrained model to be adapted.  Execute the following command in the 
     ./scripts/train_resnet18_sdl.sh
     ```
 
-
+## References
 <div style="text-align:justify; font-size:80%">
     <p>
         [1] Eleni Triantafillou, Tyler Zhu, Vincent Dumoulin, Pascal Lamblin, Utku Evci, Kelvin Xu, Ross Goroshin, Carles Gelada, Kevin Swersky, Pierre-Antoine Manzagol, Hugo Larochelle; <a href="https://arxiv.org/abs/1903.03096">Meta-Dataset: A Dataset of Datasets for Learning to Learn from Few Examples</a>; ICLR 2020.
@@ -114,7 +114,5 @@ Specify a pretrained model to be adapted.  Execute the following command in the 
 
 
 ## Acknowledge
-We thank authors of [Meta-Dataset](https://github.com/google-research/meta-dataset), [SUR](https://github.com/dvornikita/SUR), [Residual Adapter](https://github.com/srebuffi/residual_adapters) for their source code. 
+We thank authors of [Meta-Dataset](https://github.com/google-research/meta-dataset), [URL/TSA](https://github.com/VICO-UoE/URL), [JigsawClustering](https://github.com/dvlab-research/JigsawClustering) for their source code. 
 
-## Contact
-For any question, you can contact [Wei-Hong Li](https://weihonglee.github.io).

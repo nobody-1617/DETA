@@ -63,7 +63,7 @@ def main():
     test_loader = MetaDatasetEpisodeReader('test', trainsets, trainsets, testsets, test_type=args['test.type'])
 
     model_name = args['model.name']
-    Prop = args['ratio']
+    ratio = args['ratio']
     Ours = args['ours']
 
     if Ours:
@@ -132,9 +132,9 @@ def main():
                 target_images = sample['target_images']
 
                 # Label bias
-                if Prop > 0:
+                if ratio > 0:
                     N_shots = 10
-                    N_bias = int(N_shots * Prop)
+                    N_bias = int(N_shots * ratio)
                     data = []
                     N_way = context_labels[-1] + 1
                     for nw in range(N_way):

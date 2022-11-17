@@ -76,7 +76,6 @@ An overview of the proposed DETA (in a 2-way 3-shot exemple). During each iterat
 Specify a pretrained model to be adapted.  Execute the following command in the root directory of this project:
     ```
     python main.py --model.name=moco --maxIt=40 n_regions=2 ratio=0.   
-
     ```
 
 ## References

@@ -74,10 +74,12 @@ An overview of the proposed DETA (in a 2-way 3-shot exemple). During each iterat
 
 ## Task Adaptation
 Specify a pretrained model to be adapted.  Execute the following command in the root directory of this project:
+
     ```
     ./scripts/train_resnet18_sdl.sh
     ```
-    
+
+
 <div style="text-align:justify; font-size:80%">
     <p>
         [1] Eleni Triantafillou, Tyler Zhu, Vincent Dumoulin, Pascal Lamblin, Utku Evci, Kelvin Xu, Ross Goroshin, Carles Gelada, Kevin Swersky, Pierre-Antoine Manzagol, Hugo Larochelle; <a href="https://arxiv.org/abs/1903.03096">Meta-Dataset: A Dataset of Datasets for Learning to Learn from Few Examples</a>; ICLR 2020.

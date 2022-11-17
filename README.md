@@ -37,8 +37,6 @@ An overview of the proposed DETA (in a 2-way 3-shot exemple). During each iterat
 </p>
 
 
-# Implementation Guidance. 
-
 ## Dependencies
 * Python 3.6 or greater
 * PyTorch 1.0 or greater

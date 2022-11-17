@@ -62,16 +62,16 @@ def main():
     trainsets = TRAIN_METADATASET_NAMES
     test_loader = MetaDatasetEpisodeReader('test', trainsets, trainsets, testsets, test_type=args['test.type'])
 
-    model_name = 'MOCO'
-    Prop = 0.
-    Ours = True
+    model_name = args['model.name']
+    Prop = args['ratio']
+    Ours = args['ours']
 
     if Ours:
         is_baseline = False
     else:
         is_baseline = True
-    K_patch = 2
-    max_It = 40
+    K_patch = args['n_regions']
+    max_It = args['maxIt']
     TEST_SIZE = 600
 
     is_weight_patch = True
@@ -206,6 +206,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
 

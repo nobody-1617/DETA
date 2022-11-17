@@ -1,8 +1,8 @@
-# Universal Representation Learning and Task-specific Adaptation for Few-shot Learning 
-A universal representation learning algorithm that learns a set of well-generalized representations via a single universal network from multiple diverse visual datasets and task-specific adaptation techniques for few-shot learning.
+# DETA: Debiased Task Adaptation for Few-Shot Learning
+Test-time task adaptation in few-shot learning aims to adapt a pre-trained task-agnostic model for capturing taskspecific knowledge of the test task, relying on few-labeled support samples. Previous paradigms generally focus on developing advanced algorithms to achieve the goal, while neglecting the inherent problems of the given support samples. In fact, with only a handful of samples available, the adverse effect of inevitable support bias, i.e., data and label bias from support samples, can be severely amplified. To circumvent the problem, in this work we propose DEbiased Task Adaptation (DETA), a unified dataand label-debiasing framework orthogonal to existing task adaptation approaches. Without extra supervision, DETA filters out task-irrelevant (a.k.a, biased) global and local representations by taking advantage of both global visual information and local region details of support samples. On the challenging Meta-Dataset, DETA consistently improves the performance of a broad spectrum of baseline methods applied on various pre-trained models. Notably, by tackling the overlooked data bias in Meta-Dataset, DETA establishes new state-of-the-art results.
 
 <p align="center">
-  <img src="./figures/fsl.png" style="width:60%">
+  <img src="./figures/f1.png" style="width:60%">
 </p>
 
 > [**Universal Representation Learning from Multiple Domains for Few-shot Classification**](https://arxiv.org/pdf/2103.13841),            

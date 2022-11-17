@@ -53,13 +53,17 @@ This code requires the following:
     * To test unseen domain (out-of-domain) performance on additional datasets, i.e. MNIST, CIFAR-10 and CIFAR-100, follow the installation instruction in the [CNAPs repository](https://github.com/cambridge-mlg/cnaps) to get these datasets.
 
 ## Pretrained Models
-- [MoCo-v2 (RN-50)](https://drive.google.com/file/d/1MvUcvQ8OQtoOk1MIiJmK6_G8p4h8cbY9/view?usp=sharing)
+- [URL (RN-18)](https://github.com/VICO-UoE/URL)
 
-- [CLIP (RN-50)](https://drive.google.com/file/d/1Dv8TX6iQ-BE2NMpfd0sQmH2q4mShmo1A/view?usp=sharing)
+- [DINO (ViT-S)](https://github.com/facebookresearch/dino)
 
-- [Deit (ViT-S)](https://drive.google.com/file/d/1MvUcvQ8OQtoOk1MIiJmK6_G8p4h8cbY9/view?usp=sharing)
+- [MoCo-v2 (RN-50)](https://github.com/facebookresearch/moco)
 
-- [Swin Transformer (Tiny)](https://drive.google.com/file/d/1Dv8TX6iQ-BE2NMpfd0sQmH2q4mShmo1A/view?usp=sharing)
+- [CLIP (RN-50)](https://github.com/OpenAI/CLIP)
+
+- [Deit (ViT-S)]({https://github.com/facebookresearch/deit)
+
+- [Swin Transformer (Tiny)](https://github.com/microsoft/Swin-Transformer)
 
 ## Initialization
 1. Before doing anything, first run the following commands.
@@ -69,8 +73,6 @@ This code requires the following:
     export RECORDS=<the directory where tf-records of MetaDataset are stored>
     ```
     
-    Note the above commands need to be run every time you open a new command shell.
-
 2. Enter the root directory of this project, i.e. the directory where this project was cloned or downloaded.
 
 

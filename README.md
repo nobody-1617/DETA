@@ -71,7 +71,12 @@ An overview of the proposed DETA (in a 2-way 3-shot exemple). During each iterat
 
 
 ## Task Adaptation
-* Specify a pretrained model to be adapted. Just execute the following command:
+Specify a pretrained model to be adapted, and execute the following command.
+* Baseline
+    ```
+    python main.py --ours False --pretrained_model=MoCo --maxIt=40 --n_regions=2 --ratio=0. 
+    ```
+* Ours
     ```
     python main.py --ours True --pretrained_model=MoCo --maxIt=40 --n_regions=2 --ratio=0. 
     ```

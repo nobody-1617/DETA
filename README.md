@@ -63,13 +63,13 @@ An overview of the proposed DETA (in a 2-way 3-shot exemple). During each iterat
 - [Swin Transformer (Tiny)](https://github.com/microsoft/Swin-Transformer)
 
 ## Initialization
-1. Before doing anything, first run the following commands.
+* Before doing anything, first run the following commands.
     ```
     ulimit -n 50000
     export META_DATASET_ROOT=<root directory of the cloned or downloaded Meta-Dataset repository>
     export RECORDS=<the directory where tf-records of MetaDataset are stored>
     ```
-2. Enter the root directory of this project, i.e. the directory where this project was cloned or downloaded.
+* Enter the root directory of this project, i.e. the directory where this project was cloned or downloaded.
 
 
 ## Task Adaptation

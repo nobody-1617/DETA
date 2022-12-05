@@ -194,10 +194,18 @@ def ta(context_images, context_labels, model, model_name="MoCo", max_iter=40, lr
     e.g. adapters (alpha) and/or pre-classifier alignment mapping (beta)
     """
     model.eval()
+    lr = lr_finetune
+    if model_name == 'CLIP':
+        feat = model.encode_image(context_images[0].unsqueeze(0))
+    else:
+        feat = model(context_images[0].unsqueeze(0))
+    proj = projector(feat_dim=feat.shape[1]).cuda()
+    
     params = []
     backbone_params = [v for k, v in model.named_parameters()]
-    lr = lr_finetune
     params.append({'params': backbone_params})
+    proj_params = [v for k, v in proj.named_parameters()]
+    params.append({'params': proj_params})
 
     optimizer = torch.optim.Adadelta(params, lr=lr)
     criterion_clu = SupCluLoss(temperature=0.07)
@@ -218,11 +226,7 @@ def ta(context_images, context_labels, model, model_name="MoCo", max_iter=40, lr
     lamb = 0.7
     size_list = [84,128]
     sample_weight = None
-    if model_name == 'CLIP':
-        feat = model.encode_image(context_images[0].unsqueeze(0))
-    else:
-        feat = model(context_images[0].unsqueeze(0))
-    proj = projector(feat_dim=feat.shape[1]).cuda()
+
     if is_baseline:
         START_WEIGHT = 10086
     for i in range(max_iter):

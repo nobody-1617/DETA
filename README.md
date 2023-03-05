@@ -39,12 +39,12 @@ An overview of the proposed DETA (in a 2-way 3-shot exemple). During each iterat
 ## Visualization
 - Visualization of the cropped regions and calculated weights by CoRA.
 <p align="center">
-  <img src="./figures/f4.png" style="width:95%">
+  <img src="./figures/f3.png" style="width:95%">
 </p>
 
 - CAM visualization.
 <p align="center">
-  <img src="./figures/f5.png" style="width:95%">
+  <img src="./figures/f4.png" style="width:50%">
 </p>
 
 ## Dependencies

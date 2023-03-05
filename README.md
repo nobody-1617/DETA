@@ -1,20 +1,20 @@
 # DETA: Debiased Task Adaptation for Few-Shot Learning
 ## Abstract
-Test-time task adaptation in few-shot learning aims to adapt a pre-trained task-agnostic model for capturing taskspecific knowledge of the test task, relying on few-labeled support samples. Previous paradigms generally focus on developing advanced algorithms to achieve the goal, while neglecting the inherent problems of the given support samples. In fact, with only a handful of samples available, the adverse effect of inevitable support bias, i.e., data and label bias from support samples, can be severely amplified. To circumvent the problem, in this work we propose DEbiased Task Adaptation (DETA), a unified dataand label-debiasing framework orthogonal to existing task adaptation approaches. Without extra supervision, DETA filters out task-irrelevant (a.k.a, biased) global and local representations by taking advantage of both global visual information and local region details of support samples. On the challenging Meta-Dataset, DETA consistently improves the performance of a broad spectrum of baseline methods applied on various pre-trained models. Notably, by tackling the overlooked data bias in Meta-Dataset, DETA establishes new state-of-the-art results.
+Test-time task adaptation in few-shot learning aims to adapt a pre-trained task-agnostic model for capturing task-specific knowledge of the test task, rely only on few-labeled support samples. Previous attempts  generally focus on developing advanced algorithms to achieve the goal, while neglecting the inherent problems of the given support samples. In fact, with only a handful of samples available, the adverse effect of either the data noise (a.k.a. X-noise) or the label noise (a.k.a. Y-noise) from support samples can be severely amplified. To tackle the problem, in this work we propose DEnoised Task Adaptation (DETA), a unified data- and label-denoising framework orthogonal to existing task adaptation approaches. Without extra supervision, DETA filters out task-irrelevant (i.e. noisy) global and local representations by taking advantage of both global visual information and local region details of support samples. On the challenging Meta-Dataset, DETA consistently improves the performance of a broad spectrum of baseline methods applied on various pre-trained models. Notably, by tackling the overlooked data noise in Meta-Dataset, DETA establishes new state-of-the-art results. 
 
 <p align="center">
   <img src="./figures/f1.png" style="width:50%">
 </p>
  
 ## Overview
-An overview of the proposed DETA (in a 2-way 3-shot exemple). During each iteration of task adaptation, the images together with a collection of cropped local regions of the support samples are first fed into a pre-trained model to extract image and region representations. Next, a Contrastive Relevance Aggregation(CoRA) module takes the region representations as input to determine the weight of each region, based on which we can calculate the image weights by a momentum accumulator. Finally, a Supervised Soft-Clustering (SS-CL) loss and a Hybrid Soft-ProtoNet (HS-PN) loss are devised in a weighted embedding space for bias-robust representation learning. At inference, we only retain the adapted model to produce image representations of support samples, on which we build a classifier guided by the refined image weights from the accumulator. 
+An overview of the proposed DETA (in a 2-way 3-shot exemple). During each iteration of task adaptation, the images together with a collection of cropped local regions of the support samples are first fed into a pre-trained model to extract image and region representations. Next, a Contrastive Relevance Aggregation(CoRA) module takes the region representations as input to determine the weight of each region, based on which we can calculate the image weights by a momentum accumulator. Finally, a local compactness loss and a global dispersion loss are devised in a weighted embedding space for noise-robust representation learning. At inference, we only retain the adapted model to produce image representations of support samples, on which we build a classifier guided by the refined image weights from the accumulator. 
 <p align="center">
   <img src="./figures/f2.png" style="width:100%">
 </p>
 
 
 ## Contributions
-- We uncover the overlooked support bias problem in test-time task adaptation, and propose DETA to resolve the two types of support bias (i.e., data and label bias) in a unified framework.
+- We propose DETA, a first, unified dataand label-denoising framework for FSL.
 
 - DETA can be flexibly plugged into different adapter-based and finetuning-based task adaptation paradigms.
 
@@ -36,6 +36,16 @@ An overview of the proposed DETA (in a 2-way 3-shot exemple). During each iterat
   <img src="./figures/t3.png" style="width:95%">
 </p>
 
+## Visualization
+- Visualization of the cropped regions and calculated weights by CoRA.
+<p align="center">
+  <img src="./figures/t4.png" style="width:95%">
+</p>
+
+- CAM visualization.
+<p align="center">
+  <img src="./figures/t5.png" style="width:95%">
+</p>
 
 ## Dependencies
 * Python 3.6 or greater

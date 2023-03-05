@@ -1,4 +1,4 @@
-# DETA: Debiased Task Adaptation for Few-Shot Learning
+# DETA: Denoised Task Adaptation for Few-Shot Learning
 ## Abstract
 Test-time task adaptation in few-shot learning aims to adapt a pre-trained task-agnostic model for capturing task-specific knowledge of the test task, rely only on few-labeled support samples. Previous attempts  generally focus on developing advanced algorithms to achieve the goal, while neglecting the inherent problems of the given support samples. In fact, with only a handful of samples available, the adverse effect of either the data noise (a.k.a. X-noise) or the label noise (a.k.a. Y-noise) from support samples can be severely amplified. To tackle the problem, in this work we propose DEnoised Task Adaptation (DETA), a unified data- and label-denoising framework orthogonal to existing task adaptation approaches. Without extra supervision, DETA filters out task-irrelevant (i.e. noisy) global and local representations by taking advantage of both global visual information and local region details of support samples. On the challenging Meta-Dataset, DETA consistently improves the performance of a broad spectrum of baseline methods applied on various pre-trained models. Notably, by tackling the overlooked data noise in Meta-Dataset, DETA establishes new state-of-the-art results. 
 
@@ -39,12 +39,12 @@ An overview of the proposed DETA (in a 2-way 3-shot exemple). During each iterat
 ## Visualization
 - Visualization of the cropped regions and calculated weights by CoRA.
 <p align="center">
-  <img src="./figures/t4.png" style="width:95%">
+  <img src="./figures/f4.png" style="width:95%">
 </p>
 
 - CAM visualization.
 <p align="center">
-  <img src="./figures/t5.png" style="width:95%">
+  <img src="./figures/f5.png" style="width:95%">
 </p>
 
 ## Dependencies

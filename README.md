@@ -21,7 +21,7 @@ An overview of the proposed DETA (in a 2-way 3-shot exemple). During each iterat
 - Extensive experiments on Meta-Dataset demonstrate the effectiveness and flexibility of DETA.
 
 ## Strong Performance
-- Image-ddnoising on vanilla Meta-dataset
+- Image-denoising on vanilla Meta-dataset
 <p align="center">
   <img src="./figs/t1.png" style="width:95%">
 </p>

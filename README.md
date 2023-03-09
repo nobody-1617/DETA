@@ -90,7 +90,7 @@ Specify a pretrained model to be adapted, and execute the following command.
     ```
     python main.py --pretrained_model=MOCO --maxIt=40 --ratio=0. --test.type=10shot --ours --n_regions=2
     ```
- Note: set ratio=0. for data-debiasing, set  0. < ratio < 1.0 for label-debiasing.
+ Note: set ratio=0. for image-denoising, set  0. < ratio < 1.0 for label-denoising.
 
 
 ## References
